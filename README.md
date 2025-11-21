@@ -9,7 +9,7 @@ A lightweight Python tool to manage PDF files efficiently.
 * Encrypt: Password protect your documents.
 
 ## How to Download the Application
-Go to the [Releases Page]to download the Windows App (.exe).
+Go to the [Releases Page] https://github.com/joydeepd900/PDF-Toolkit/releases/tag/v1.0 to download the Windows App (.exe).
 
 ## How to Run (Source Code)
 To run the raw script:
