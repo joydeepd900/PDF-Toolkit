@@ -1,6 +1,6 @@
 # PDF-Toolkit
 
-A lightweight utility Python tool to manage PDF files efficiently.
+A lightweight utility Python tool to manage PDF files efficiently. This by default starts in Command Prompt.
 
 ## Features
 * Merger: Combine multiple PDFs into one.
@@ -20,10 +20,12 @@ Go to the [Releases Page] to download the Windows App (.exe).
 https://github.com/joydeepd900/PDF-Toolkit/releases/tag/v1.0
 
 ## How to Use
+On starting the application, you will be displayed the Menu.
+
 Refer to the Manual with Screenshots attached in this repository.
 https://github.com/joydeepd900/PDF-Toolkit/tree/main/PDF%20Toolkit%20Manual
 
-Files (pdfs) will be save in the same folder selected for application.
+Note: Files (pdfs) will be save in the same folder selected for application.
 
 ## To Run the Source Code
 1. Install pypdf library. Run 'pip install pypdf' in Command Prompt 
