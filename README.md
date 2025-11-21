@@ -21,6 +21,8 @@ https://github.com/joydeepd900/PDF-Toolkit/releases/tag/v1.0
 
 ## How to Use
 Refer to the Manual with Screenshots attached in this repository.
+https://github.com/joydeepd900/PDF-Toolkit/tree/main/PDF%20Toolkit%20Manual
+
 Files (pdfs) will be save in the same folder selected for application.
 
 ## To Run the Source Code
