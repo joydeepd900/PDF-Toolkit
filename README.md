@@ -1,40 +1,66 @@
-# PDF-Toolkit
+# PDF Toolkit v2.0 
 
-A lightweight utility Python tool to manage PDF files efficiently. This by default starts in Command Prompt.
+A lightweight, secure, and offline Python utility to manage and convert PDF files efficiently.
 
-## Features
-* Merger: Combine multiple PDFs into one.
-* Splitter: Separate every page into its own file.
-* Extracter: Pull specific page ranges (e.g., pages 3-5).
-* Encrypter: Password protect your documents.
+Unlike online tools that require uploading sensitive documents to unknown servers, PDF Toolkit runs entirely on your local machine, ensuring 100% data privacy.
 
-## Tools Used
-* Python to code
-* os module to connect with the system
-* tkinter module for the selection window GUI
-* pypdf library to manage the pdfs
-* pyintaller to convert the .py file to .exe file
+## 🚀 Key Features
 
-## To Download the Application
-Go to the [Releases Page] to download the Windows App (.exe).
-https://github.com/joydeepd900/PDF-Toolkit/releases/tag/v1.0
+### PDF Management
+* **Merge:** Combine multiple PDFs from a folder into a single document (automatically sorted).
+* **Split:** Instantly separate every page of a document into its own PDF file.
+* **Extract Pages:** Create a new PDF containing only specific page ranges (e.g., pages 3-5).
+* **Encryption:** Secure your documents with AES-128 password protection.
 
-## How to Use
-On starting the application, you will be displayed the Menu.
+### Conversion & Privacy (New in v2.0)
+* **Image to PDF:** Convert collections of Images (JPG/PNG) into a single PDF file.
+* **PDF to Text:** Extract raw text from PDF files into a `.txt` file for easy editing.
+* **Privacy Mode:** Strip hidden metadata (Author, Creator, Date) to anonymize your files before sharing.
 
-Refer to the Manual with Screenshots attached in this repository.
-https://github.com/joydeepd900/PDF-Toolkit/tree/main/PDF%20Toolkit%20Manual
+## 🛠️ Built With
+* **Python 3.13.7:** Core logic.
+* **pypdf:** For binary PDF manipulation (reading/writing streams).
+* **Pillow (PIL):** For image processing and conversion.
+* **Tkinter:** For native Windows file/folder selection dialogs.
+* **OS Module:** For file system navigation.
 
-Note: Files (pdfs) will be save in the same folder selected for application.
+## 📥 Download & Installation (Windows)
+No Python installation is required to use the tool.
 
-## To Run the Source Code
-1. Install pypdf library. Run 'pip install pypdf' in Command Prompt 
-2. Then run the script: 'python "PDF TOOLKIT.py"'
+1.  Go to the [Releases Page](https://github.com/joydeepd900/PDF-Toolkit/releases/latest).
+2.  Download the latest `.exe` file (e.g., `PDF.TOOLKIT.v2.exe`).
+3.  Double-click to run.
 
-## Testing
-* This is a basic python tool that can be used for pdf managing, but won't execute messy commands and may report error or terminate the momment. This may also be prone to many other unknown errors. But as a beginner in python, that's all I could create, and I hope to modify it more in future.
-* For folder/file selection, not selecting a folder/file will terminate the program.
-* For Merger, select a folder containg only the PDFs you want to merge. It will merge all the files in folder.
-* For Splitter, avoid splitting large pdfs as they will occupy your storage. Use Extracter instead.
-* For Extracter, do not enter wrong range of pages as it may report error or terminate the program.
-* For Encrypter, it creates a new locked file and does not modify the existing.
+## 📖 How to Use
+On starting the application, you will see the interactive Command Line Interface (CLI):
+
+1.  **Select an Option:** Type the number corresponding to your desired task (0-7).
+2.  **Select Files:** A Windows pop-up dialog will appear to let you choose your files/folders.
+3.  **Process:** The tool will process your file and save the output in the **same folder** as the original.
+
+> **Need a Visual Guide?**
+> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/tree/main/PDF%20Toolkit%20Manual) for step-by-step screenshots. Please note: the manual is yet to be updated and existing manual is for v1.0
+
+## 💻 For Developers (Running from Source)
+If you want to modify or run the raw script, follow these steps:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/joydeepd900/PDF-Toolkit.git](https://github.com/joydeepd900/PDF-Toolkit.git)
+    ```
+2.  **Install Dependencies:**
+    ```bash
+    pip install pypdf Pillow
+    ```
+3.  **Run the script:**
+    ```bash
+    python "PDF TOOLKIT V2.py"
+    ```
+
+## ⚠️ Known Limitations
+* **Merging:** Ensure the folder contains *only* the PDFs you wish to merge.
+* **Large Files:** Splitting very large PDFs (1000+ pages) may consume significant storage as it creates a file for every page. Use the **Extract** feature for targeted splitting.
+* **Input Validation:** Ensure you enter valid page ranges (Start Page < End Page).
+
+---
+*Created by [Joydeepd900](https://github.com/joydeepd900)*
