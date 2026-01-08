@@ -39,7 +39,7 @@ On starting the application, you will see the interactive Command Line Interface
 3.  **Process:** The tool will process your file and save the output in the **same folder** as the original.
 
 > **Need a Visual Guide?**
-> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/tree/main/PDF%20Toolkit%20Manual) for step-by-step screenshots. Please note: the manual is yet to be updated and existing manual is for v1.0
+> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/blob/main/PDF%20Toolkit%20v1%20Manual.pdf) for step-by-step screenshots. Please note: the manual is yet to be updated and existing manual is for v1.0
 
 ## 💻 For Developers (Running from Source)
 If you want to modify or run the raw script, follow these steps:
