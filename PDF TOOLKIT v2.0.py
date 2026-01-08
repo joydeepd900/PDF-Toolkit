@@ -308,3 +308,4 @@ while True:
     elif ch == '6': strip_metadata()
     elif ch == '7': pdf_to_text()
     else: print("Invalid choice! Please try again...")
+
