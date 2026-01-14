@@ -12,7 +12,7 @@ Unlike online tools that require uploading sensitive documents to unknown server
 * **Extract Pages:** Create a new PDF containing only specific page ranges (e.g., pages 3-5).
 * **Encryption:** Secure your documents with AES-128 password protection.
 
-### Conversion & Privacy (New in v2.0)
+### Conversion & Privacy (New since v2.0)
 * **Image to PDF:** Convert collections of Images (JPG/PNG) into a single PDF file.
 * **PDF to Text:** Extract raw text from PDF files into a `.txt` file for easy editing.
 * **Privacy Mode:** Strip hidden metadata (Author, Creator, Date) to anonymize your files before sharing.
@@ -39,7 +39,7 @@ On starting the application, you will see the interactive Command Line Interface
 3.  **Process:** The tool will process your file and save the output in the **same folder** as the original.
 
 > **Need a Visual Guide?**
-> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/blob/main/PDF%20Toolkit%20v1%20Manual.pdf) for step-by-step screenshots. Please note: the manual is yet to be updated and existing manual is for v1.0
+> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/blob/main/PDF%20Toolkit%20v1%20Manual.pdf) for step-by-step screenshots. Please note that the manual has not yet been updated, and the existing manual is for version v1.0; however, the workflow remains similar.
 
 ## 💻 For Developers (Running from Source)
 If you want to modify or run the raw script, follow these steps:
