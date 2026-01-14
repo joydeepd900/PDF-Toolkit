@@ -59,7 +59,7 @@ If you want to modify or run the raw script, follow these steps:
 
 ## ⚠️ Known Limitations
 * **Merging:** The tool automatically detects PDFs, JPGs, and PNGs. Any other file types in the folder will be skipped.
-* * **Large Files:** Splitting very large PDFs (1000+ pages) may consume significant storage as it creates a file for every page. Use the **Extract** feature for targeted splitting.
+* **Large Files:** Splitting very large PDFs (1000+ pages) may consume significant storage as it creates a file for every page. Use the **Extract** feature for targeted splitting.
 * **Input Validation:** Ensure you enter valid page ranges (Start Page < End Page).
 
 ---
