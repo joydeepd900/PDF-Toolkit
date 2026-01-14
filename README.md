@@ -8,7 +8,7 @@ Unlike online tools that require uploading sensitive documents to unknown server
 
 ### PDF Management
 * **Universal Merge:** Combine multiple **PDFs and Images** (JPG/PNG) from a folder into a single PDF document.
-* ** **Split:** Instantly separate every page of a document into its own PDF file.
+* **Split:** Instantly separate every page of a document into its own PDF file.
 * **Extract Pages:** Create a new PDF containing only specific page ranges (e.g., pages 3-5).
 * **Encryption:** Secure your documents with AES-128 password protection.
 
