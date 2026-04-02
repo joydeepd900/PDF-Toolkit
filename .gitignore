@@ -1,0 +1,34 @@
+# --- Python / Backend ---
+# Block the virtual environment
+.venv/
+venv/
+env/
+
+# Block Python compiled cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Node / Frontend ---
+# Block heavy node modules (Vercel will install these automatically)
+frontend/node_modules/
+
+# Block local build outputs
+frontend/dist/
+
+# --- Environment & OS ---
+# Block secret environment variables (if you add them later)
+.env
+
+# Block Windows/Mac system files
+.DS_Store
+Thumbs.db
+
+# --- Temporary Workspace Files ---
+# Block your temporary testing/spec files to keep the repo professional
+curl_out.txt
+spec.txt
+spec_utf8.txt
+test_req.py
+extract_docx.py
