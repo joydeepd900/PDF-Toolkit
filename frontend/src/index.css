@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+/* ─── Range slider — cross-browser track + thumb ──────────────────── */
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgb(75 85 99); /* gray-600 track */
+  outline: none;
+  cursor: pointer;
+}
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgb(250 204 21); /* yellow-400 */
+  cursor: pointer;
+  border: 2px solid rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(250,204,21,0.6);
+}
+input[type='range']::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: rgb(250 204 21);
+  cursor: pointer;
+  border: 2px solid rgba(0,0,0,0.2);
+  box-shadow: 0 0 8px rgba(250,204,21,0.6);
+}
+input[type='range']::-moz-range-track {
+  height: 6px;
+  border-radius: 9999px;
+  background: rgb(75 85 99);
+}
+/* Light mode overrides for the track */
+.light-mode input[type='range'] {
+  background: rgb(209 213 219); /* gray-300 */
+}
+.light-mode input[type='range']::-moz-range-track {
+  background: rgb(209 213 219);
+}
+
+/* ─── Base styles ───────────────────────────────────────────────────── */
+@layer base {
+  body {
+    @apply bg-black text-gray-100 antialiased font-sans m-0 p-0 h-screen w-screen overflow-hidden;
+  }
+}
+
+/* ─── Shared utilities ──────────────────────────────────────────────── */
+@layer utilities {
+  .accent-primary {
+    @apply bg-yellow-400 text-black hover:bg-yellow-300 transition-colors duration-150;
+  }
+  .accent-ring {
+    @apply focus:ring-2 focus:ring-yellow-400 focus:outline-none;
+  }
+}
+
+/* ============================================================
+   DARK MODE  (default — all Tailwind classes work as-is)
+   ============================================================ */
+
+/* ─── TopNav ─────────────────────────────────────────────── */
+.topnav {
+  background-color: rgb(23 23 23); /* neutral-900 */
+  border-color: rgba(255,255,255,0.05);
+  color: rgb(243 244 246); /* gray-100 */
+}
+
+/* ─── Workspace ──────────────────────────────────────────── */
+.workspace {
+  background-color: #000;
+}
+.workspace-subtitle { color: rgb(156 163 175); } /* gray-400 */
+.workspace-label    { color: rgb(209 213 219); } /* gray-300 */
+.workspace-extra-inputs {
+  background-color: rgb(23 23 23);
+  border-color: rgba(255,255,255,0.05);
+}
+.workspace-input {
+  background-color: #000;
+  border-color: rgba(255,255,255,0.10);
+  color: #fff;
+}
+.dropzone-default {
+  border-color: rgb(75 85 99); /* gray-600 */
+}
+.dropzone-default:hover {
+  border-color: rgba(250,204,21,0.5);
+  background-color: rgb(23 23 23);
+}
+
+/* ─── File list ──────────────────────────────────────────── */
+.file-list {
+  background-color: rgb(23 23 23);
+  border-color: rgba(255,255,255,0.05);
+}
+.file-list-title  { color: rgb(229 231 235); }
+.file-item {
+  background-color: #000;
+  border-color: rgba(255,255,255,0.05);
+}
+.file-item-name    { color: rgb(209 213 219); }
+.file-remove-btn   { color: rgb(107 114 128); }
+.file-remove-btn:hover { color: rgb(250 204 21); background-color: rgba(255,255,255,0.05); }
+
+/* ─── Modals ─────────────────────────────────────────────── */
+.modal-card {
+  background-color: rgb(23 23 23);
+  border-color: rgba(255,255,255,0.10);
+  color: #fff;
+}
+.modal-label   { color: rgb(209 213 219); }
+.modal-input {
+  background-color: #000;
+  border-color: rgba(255,255,255,0.10);
+  color: #fff;
+}
+.modal-cancel-btn { color: rgb(156 163 175); }
+.modal-cancel-btn:hover { color: #fff; }
+
+/* ─── Toasts ─────────────────────────────────────────────── */
+.toast-success {
+  background-color: rgb(30 41 59); /* slate-800 */
+  border-color: rgba(74,222,128,0.5);
+  color: rgb(74 222 128); /* green-400 */
+}
+.toast-error {
+  background-color: rgb(30 41 59);
+  border-color: rgba(250,204,21,0.5);
+  color: rgb(250 204 21);
+}
+
+/* ─── Settings Panel ─────────────────────────────────────── */
+.settings-panel {
+  background-color: #000;
+}
+.settings-card {
+  background-color: rgb(23 23 23);
+  border-color: rgba(255,255,255,0.06);
+}
+.settings-icon-bg { background-color: rgba(250,204,21,0.10); }
+.settings-description { color: rgb(156 163 175); }
+.settings-badge {
+  background-color: rgba(250,204,21,0.15);
+  color: rgb(253 224 71); /* yellow-300 */
+}
+.settings-back-btn { color: rgb(156 163 175); }
+.settings-back-btn:hover { color: rgb(243 244 246); }
+.settings-input {
+  background-color: rgb(10 10 10);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: rgb(243 244 246);
+}
+.settings-input::placeholder { color: rgb(107 114 128); }
+.settings-input:focus { outline: none; box-shadow: 0 0 0 2px rgba(250,204,21,0.4); }
+
+
+/* ============================================================
+   LIGHT MODE  (applied when .light-mode is on the root div)
+   ============================================================ */
+.light-mode {
+  color: rgb(17 24 39); /* gray-900 */
+  background-color: #f8f9fa;
+}
+.light-mode body {
+  background-color: #f8f9fa;
+  color: rgb(17 24 39);
+}
+
+/* TopNav */
+.light-mode .topnav {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+  color: rgb(17 24 39);
+}
+
+/* Sidebar */
+.light-mode .w-\[250px\] {
+  background-color: #f0f0f0;
+  border-color: rgba(0,0,0,0.08);
+}
+.light-mode .text-gray-500 { color: rgb(107 114 128); }
+.light-mode .text-gray-400 { color: rgb(75 85 99); }
+.light-mode .hover\:bg-white\/5:hover { background-color: rgba(0,0,0,0.05); }
+.light-mode .hover\:text-gray-200:hover { color: rgb(31 41 55); }
+
+/* Workspace */
+.light-mode .workspace {
+  background-color: #f8f9fa;
+}
+.light-mode .workspace-subtitle { color: rgb(75 85 99); }
+.light-mode .workspace-label    { color: rgb(55 65 81); }
+.light-mode .workspace-extra-inputs {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+}
+.light-mode .workspace-input {
+  background-color: #f8f9fa;
+  border-color: rgba(0,0,0,0.12);
+  color: rgb(17 24 39);
+}
+.light-mode .dropzone-default {
+  border-color: rgb(209 213 219);
+}
+.light-mode .dropzone-default:hover {
+  border-color: rgba(250,204,21,0.6);
+  background-color: #fff;
+}
+.light-mode .text-gray-300 { color: rgb(55 65 81); }
+.light-mode h2, .light-mode h3 { color: rgb(17 24 39); }
+
+/* File list */
+.light-mode .file-list {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+}
+.light-mode .file-list-title { color: rgb(31 41 55); }
+.light-mode .file-item {
+  background-color: #f8f9fa;
+  border-color: rgba(0,0,0,0.06);
+}
+.light-mode .file-item-name { color: rgb(55 65 81); }
+.light-mode .file-remove-btn { color: rgb(156 163 175); }
+.light-mode .file-remove-btn:hover { background-color: rgba(0,0,0,0.04); }
+
+/* Modals */
+.light-mode .modal-card {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.10);
+  color: rgb(17 24 39);
+}
+.light-mode .modal-label { color: rgb(55 65 81); }
+.light-mode .modal-input {
+  background-color: #f8f9fa;
+  border-color: rgba(0,0,0,0.12);
+  color: rgb(17 24 39);
+}
+.light-mode .modal-cancel-btn { color: rgb(107 114 128); }
+.light-mode .modal-cancel-btn:hover { color: rgb(17 24 39); }
+
+/* Toasts */
+.light-mode .toast-success {
+  background-color: #fff;
+  border-color: rgba(22,163,74,0.5);
+  color: rgb(22 163 74);
+}
+.light-mode .toast-error {
+  background-color: #fff;
+  border-color: rgba(234,179,8,0.6);
+  color: rgb(161 138 0);
+}
+
+/* Settings Panel */
+.light-mode .settings-panel { background-color: #f8f9fa; }
+.light-mode .settings-card {
+  background-color: #ffffff;
+  border-color: rgba(0,0,0,0.08);
+}
+.light-mode .settings-icon-bg { background-color: rgba(250,204,21,0.12); }
+.light-mode .settings-description { color: rgb(107 114 128); }
+.light-mode .settings-badge {
+  background-color: rgba(250,204,21,0.15);
+  color: rgb(133 107 0);
+}
+.light-mode .settings-back-btn { color: rgb(107 114 128); }
+.light-mode .settings-back-btn:hover { color: rgb(17 24 39); }
+.light-mode .settings-input {
+  background-color: #f8f9fa;
+  border-color: rgba(0,0,0,0.12);
+  color: rgb(17 24 39);
+}
+.light-mode .settings-input::placeholder { color: rgb(156 163 175); }
+.light-mode .settings-input:focus { box-shadow: 0 0 0 2px rgba(250,204,21,0.45); }
+
+/* Neutral-600 toggle off state looks fine on both themes */
