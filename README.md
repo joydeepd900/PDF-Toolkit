@@ -1,82 +1,67 @@
-# PDF Toolkit v2.5 📄
+# **PDF Toolkit v3.0 (Web) & v2.6 (Legacy) 📄**
 
-A lightweight, secure, and cross-platform Python utility to manage and convert PDF files efficiently. 
+A professional, full-stack PDF management suite. Originally born as a local Python utility, now re-engineered into a modern, decoupled web application.
 
-Unlike online tools that require uploading sensitive documents to unknown servers, PDF Toolkit runs entirely on your local machine, ensuring 100% data privacy. Now running natively on both **Windows and Linux**!
+## **🌟 Modern Web Version (v3.0)**
 
-## 🚀 Key Features
+The latest version of PDF Toolkit is now a cloud-based web application, offering a sleek UI and high-speed processing without requiring any local installation.
 
-### PDF Management
-* **Universal Merge:** Combine multiple **PDFs and Images** (JPG/PNG) from a folder into a single PDF document.
-* **Split:** Instantly separate every page of a document into its own PDF file.
-* **Extract Pages:** Create a new PDF containing only specific page ranges (e.g., pages 3-5).
-* **Encryption:** Secure your documents with AES-128 password protection, now featuring **double-entry hidden keystrokes** to prevent typos and shoulder-surfing.
+* **Frontend:** React \+ Vite \+ Tailwind CSS (Hosted on Vercel)  
+* **Backend:** FastAPI \+ PyMuPDF \+ pypdf (Hosted on AWS EC2)  
+* **Security:** Files are processed in memory on a secure Linux server and never stored permanently.
 
-### Conversion & Privacy
-* **PDF to Image (New):** Render entire PDF pages into high-quality PNG images (Perfect for sharing documents as pictures).
-* **Extract Images (New):** Rip original, embedded photos (JPG/PNG) directly out of a PDF while leaving the text behind.
-* **Image to PDF:** Convert collections of Images into a single PDF file.
-* **PDF to Text:** Extract raw text from PDF files into a `.txt` file for easy editing.
-* **Privacy Mode:** Strip hidden metadata (Author, Creator, Date) to anonymize your files before sharing.
-* **Smart Naming:** Press 'Enter' when asked for a filename to use automatic default names.
+### **🚀 Live Demo**
 
-## 🛠️ Built With
-* **Python 3.x:** Core logic.
-* **pypdf:** For binary PDF manipulation (reading/writing streams).
-* **PyMuPDF (fitz):** For high-fidelity page rendering and image extraction.
-* **Pillow (PIL):** For image processing and conversion.
-* **Tkinter:** For native OS file/folder selection dialogs.
-* **OS Module:** For file system navigation.
+[**View the Web App**](https://pdf-toolkit-six-orpin.vercel.app) *(Update with your new URL)*
 
-## 📥 Download & Installation
-No Python installation is required to use the pre-compiled tools. Go to the [Releases Page](https://github.com/joydeepd900/PDF-Toolkit/releases/latest) to download the latest version.
+## **💾 Legacy Desktop Version (v2.6)**
 
-### 🪟 For Windows
-1. Download the latest `.exe` file (e.g., `PDF.TOOLKIT.v2.5.exe`).
-2. Double-click to run.
+For users who prefer offline processing or need to handle sensitive documents entirely on their local machine, the original Python desktop version is preserved in the legacy\_archive/ folder.
 
-### 🐧 For Linux (Ubuntu/Debian)
-1. Ensure your system has the base UI library installed by running: 
-   `sudo apt-get install python3-tk`
-2. Download the `PDF TOOLKIT v2.5` executable (no file extension).
-3. Open your terminal in the download folder and grant execution rights:
-   `chmod +x "PDF TOOLKIT v2.5"`
-4. Run the app: 
-   `./"PDF TOOLKIT v2.5"`
+### **Key Desktop Features**
 
-## 📖 How to Use
-On starting the application, you will see the interactive Command Line Interface (CLI):
+* **Privacy:** Runs 100% locally with no internet required.  
+* **Universal Merge:** Combine PDFs and Images (JPG/PNG) into one document.  
+* **Encryption:** Secure documents with AES-128 password protection.  
+* **Extraction:** RIP images or text directly out of PDF binaries.  
+* **Native UI:** Familiar OS file/folder selection dialogs via Tkinter.
 
-1.  **Select an Option:** Type the number corresponding to your desired task (0-9).
-2.  **Select Files:** A native pop-up dialog will appear to let you choose your files/folders.
-3.  **Process:** The tool will process your file and save the output in the **same folder** as the original.
+## **🛠️ Tech Stack & Architecture**
 
-> **Need a Visual Guide?**
-> Check out the [Visual User Manual](https://github.com/joydeepd900/PDF-Toolkit/blob/main/PDF%20Toolkit%20v1%20Manual.pdf) for step-by-step screenshots. *(Note: The manual is from v1.0, but the core workflow remains similar.)*
+### **Web (Current)**
 
-## 💻 For Developers (Running from Source)
-If you want to modify or run the raw script, follow these steps:
+* **Frontend:** React.js, Lucide Icons, Framer Motion.  
+* **Backend:** Python 3.10+, FastAPI, Uvicorn.  
+* **DevOps:** GitHub Actions, Vercel (Frontend), AWS EC2 (Backend).
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/joydeepd900/PDF-Toolkit.git](https://github.com/joydeepd900/PDF-Toolkit.git)
-    ```
-2.  **Create a Virtual Environment & Install Dependencies:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install pypdf Pillow pymupdf
-    ```
-    *(Linux users: Ensure you have `python3-tk` and `python3-venv` installed via `apt` first).*
-3.  **Run the script:**
-    ```bash
-    python "PDF TOOLKIT v2.5.py"
-    ```
+### **Desktop (Archive)**
 
-## ⚠️ Known Limitations
-* **Merging:** The tool automatically detects PDFs, JPGs, and PNGs. Any other file types in the folder will be safely skipped.
-* **Large Files:** Splitting very large PDFs (1000+ pages) may consume significant storage as it creates a file for every page. Use the **Extract** feature for targeted splitting.
-* **Input Validation:** Ensure you enter valid page ranges (Start Page < End Page).
+* **Libraries:** pypdf, PyMuPDF (fitz), Pillow, Tkinter.
 
----
+## **📥 Getting Started (For Developers)**
+
+### **1\. Clone the Repo**
+
+git clone \[https://github.com/joydeepd900/PDF-Toolkit.git\](https://github.com/joydeepd900/PDF-Toolkit.git)
+
+### **2\. Frontend Setup (React)**
+
+cd frontend  
+npm install  
+npm run dev
+
+### **3\. Backend Setup (FastAPI)**
+
+cd backend  
+python \-m venv venv  
+source venv/bin/activate \# Windows: venv\\Scripts\\activate  
+pip install \-r requirements.txt  
+uvicorn main:app \--reload
+
+## **📁 Repository Structure**
+
+* frontend/: The React web application.  
+* backend/: The FastAPI Python server.  
+* legacy\_archive/: Contains original v2.5 and v2.6 Python scripts and manuals.
+
 *Created by [Joydeepd900](https://github.com/joydeepd900)*
