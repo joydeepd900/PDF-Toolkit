@@ -42,7 +42,7 @@ For users who prefer offline processing or need to handle sensitive documents en
 
 ### **1\. Clone the Repo**
 
-git clone \[https://github.com/joydeepd900/PDF-Toolkit.git\](https://github.com/joydeepd900/PDF-Toolkit.git)
+git clone \[https://github.com/joydeepd900/PDF-Toolkit.git\] (https://github.com/joydeepd900/PDF-Toolkit.git)
 
 ### **2\. Frontend Setup (React)**
 
