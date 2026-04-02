@@ -1,62 +1,71 @@
-# **PDF Toolkit v3.0 (Web) & v2.6 (Legacy) 📄**
+# PDF Toolkit v3.0 (Web) & v2.6 (Legacy) 📄
 
 A professional, full-stack PDF management suite. Originally born as a local Python utility, now re-engineered into a modern, decoupled web application.
 
-## **🌟 Modern Web Version (v3.0)**
+## 🌟 Modern Web Version (v3.0)
 
 The latest version of PDF Toolkit is now a cloud-based web application, offering a sleek UI and high-speed processing without requiring any local installation.
 
-* **Frontend:** React \+ Vite \+ Tailwind CSS (Hosted on Vercel)  
-* **Backend:** FastAPI \+ PyMuPDF \+ pypdf (Hosted on AWS EC2)  
+* **Frontend:** React + Vite + Tailwind CSS (Hosted on Vercel)
+* **Backend:** FastAPI + PyMuPDF + pypdf (Hosted on AWS EC2)
 * **Security:** Files are processed in memory on a secure Linux server and never stored permanently.
 
-### **🚀 Live Demo**
+### 🚀 Live Demo
 
 [**View the Web App**](https://pdf-toolkit-joy.vercel.app) 
 
-## **💾 Legacy Desktop Version (v2.6)**
+---
 
-For users who prefer offline processing or need to handle sensitive documents entirely on their local machine, the original Python desktop version is preserved in the legacy\_archive/ folder.
+## 💾 Legacy Desktop Version (v2.6)
 
-### **Key Desktop Features**
+For users who prefer offline processing or need to handle sensitive documents entirely on their local machine, the original Python desktop version is preserved in the `legacy_archive/` folder.
 
-* **Privacy:** Runs 100% locally with no internet required.  
-* **Universal Merge:** Combine PDFs and Images (JPG/PNG) into one document.  
-* **Encryption:** Secure documents with AES-128 password protection.  
-* **Extraction:** RIP images or text directly out of PDF binaries.  
+### Key Desktop Features
+
+* **Privacy:** Runs 100% locally with no internet required.
+* **Universal Merge:** Combine PDFs and Images (JPG/PNG) into one document.
+* **Encryption:** Secure documents with AES-128 password protection.
+* **Extraction:** RIP images or text directly out of PDF binaries.
 * **Native UI:** Familiar OS file/folder selection dialogs via Tkinter.
 
-## **🛠️ Tech Stack & Architecture**
+---
 
-### **Web (Current)**
+## 🛠️ Tech Stack & Architecture
 
-* **Frontend:** React.js, Lucide Icons, Framer Motion.  
-* **Backend:** Python 3.10+, FastAPI, Uvicorn.  
+### Web (Current)
+* **Frontend:** React.js, Lucide Icons, Framer Motion.
+* **Backend:** Python 3.10+, FastAPI, Uvicorn.
 * **DevOps:** GitHub Actions, Vercel (Frontend), AWS EC2 (Backend).
 
-### **Desktop (Archive)**
-
+### Desktop (Archive)
 * **Libraries:** pypdf, PyMuPDF (fitz), Pillow, Tkinter.
 
-## **📥 Getting Started (For Developers)**
+---
 
-### **1\. Clone the Repo**
+## 📥 Getting Started (For Developers)
 
-git clone \[https://github.com/joydeepd900/PDF-Toolkit.git\] (https://github.com/joydeepd900/PDF-Toolkit.git)
+### 1. Clone the Repo
+```bash
+git clone "https://github.com/joydeepd900/PDF-Toolkit.git"
+```
 
 ### **2\. Frontend Setup (React)**
 
+```bash
 cd frontend  
 npm install  
 npm run dev
+```
 
 ### **3\. Backend Setup (FastAPI)**
 
+```bash
 cd backend  
 python \-m venv venv  
 source venv/bin/activate \# Windows: venv\\Scripts\\activate  
 pip install \-r requirements.txt  
 uvicorn main:app \--reload
+```
 
 ## **📁 Repository Structure**
 
