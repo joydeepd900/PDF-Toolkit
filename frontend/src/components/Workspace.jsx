@@ -272,6 +272,7 @@ const Workspace = ({ activeTool, settings = {}, onOpenSidebar }) => {
         >
           <UploadCloud size={48} className={`mb-4 ${isDragging ? 'text-yellow-400' : 'text-gray-400'}`} />
           <p className="workspace-subtitle font-medium">Drag &amp; Drop PDF files here, or click to browse</p>
+          <p className="text-xs mt-2 opacity-50">(Max file size: {MAX_FILE_SIZE_MB}MB per file)</p>
           <input ref={fileInputRef} type="file" multiple={config.needsMultiple} onChange={handleChange} className="hidden" />
         </div>
       ) : (
