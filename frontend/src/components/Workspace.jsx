@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { UploadCloud, File, X, Loader2, CheckCircle2, FolderOpen, AlertTriangle, Menu } from 'lucide-react';
+import { UploadCloud, File, X, Loader2, CheckCircle2, FolderOpen, AlertTriangle } from 'lucide-react';
 import { executeTool, downloadFile, MAX_FILE_SIZE_MB, MAX_FILE_SIZE_BYTES } from '../api';
 
 const toolConfig = {
@@ -27,7 +27,7 @@ const getNamingPrompt = (tool) => {
   }
 };
 
-const Workspace = ({ activeTool, settings = {}, onOpenSidebar }) => {
+const Workspace = ({ activeTool, settings = {} }) => {
   const [files, setFiles] = useState([]);
   const [isDragging, setIsDragging] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -192,21 +192,9 @@ const Workspace = ({ activeTool, settings = {}, onOpenSidebar }) => {
   };
 
   return (
-    <div className="workspace flex-1 flex flex-col items-center px-4 md:px-8 pt-4 md:pt-8 pb-8 relative overflow-y-auto">
+    <div className="workspace flex-1 flex flex-col items-center p-8 relative">
 
-      {/* Hamburger button — mobile only */}
-      <div className="w-full max-w-3xl flex items-center mb-4 md:hidden">
-        <button
-          id="btn-open-sidebar"
-          onClick={onOpenSidebar}
-          aria-label="Open navigation"
-          className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 transition-colors"
-        >
-          <Menu size={22} />
-        </button>
-        <span className="ml-3 text-sm font-medium text-gray-400">Tools</span>
-      </div>
-
+      {/* Dynamic Form Options depending on activeTool */}
       <div className="w-full max-w-3xl mb-6">
         <h2 className="text-xl font-semibold mb-2">{config.label}</h2>
         <p className="workspace-subtitle text-sm mb-6">
@@ -401,7 +389,7 @@ const Workspace = ({ activeTool, settings = {}, onOpenSidebar }) => {
 
       {/* TOAST NOTIFICATION */}
       {toast && (
-        <div className={`fixed bottom-6 right-4 md:right-8 max-w-xs md:max-w-sm px-4 py-3 rounded-md shadow-lg border text-sm font-medium flex items-center space-x-2 z-50
+        <div className={`absolute bottom-6 right-8 px-4 py-3 rounded-md shadow-lg border text-sm font-medium flex items-center space-x-2
           ${toast.type === 'success' ? 'toast-success' : 'toast-error'}`}>
           {toast.type === 'success'
             ? <CheckCircle2 size={16} className="shrink-0" />

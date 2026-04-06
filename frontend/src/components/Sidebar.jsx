@@ -26,21 +26,9 @@ const tools = [
   { id: 'compress', label: 'Compress PDF', icon: Minimize2 },
 ];
 
-const Sidebar = ({ activeTool, setActiveTool, isOpen, onClose }) => {
-  const handleToolSelect = (toolId) => {
-    setActiveTool(toolId);
-    if (onClose) onClose(); // close sidebar on mobile when a tool is picked
-  };
+const Sidebar = ({ activeTool, setActiveTool }) => {
   return (
-    <div
-      className={clsx(
-        // Always 250 px wide; on mobile it lives off-screen and slides in
-        'w-[250px] bg-neutral-900 border-r border-white/5 flex flex-col shrink-0 overflow-y-auto',
-        'fixed md:relative inset-y-0 left-0 z-40',
-        'transition-transform duration-300 ease-in-out',
-        isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
-      )}
-    >
+    <div className="w-[250px] bg-neutral-900 border-r border-white/5 flex flex-col shrink-0 overflow-y-auto">
       <div className="p-4 flex-1">
         <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">Utilities</h2>
         <nav className="space-y-1">
@@ -50,7 +38,7 @@ const Sidebar = ({ activeTool, setActiveTool, isOpen, onClose }) => {
             return (
               <button
                 key={tool.id}
-                onClick={() => handleToolSelect(tool.id)}
+                onClick={() => setActiveTool(tool.id)}
                 className={clsx(
                   'w-full flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-all duration-150',
                   isActive
