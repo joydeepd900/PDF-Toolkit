@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_BASE = '/api';
 // ── Global Configuration ──────────────────────────────────────────────────────
-export const MAX_FILE_SIZE_MB = 35;              // Maximum allowed upload size in MB
+export const MAX_FILE_SIZE_MB = 70;              // Maximum allowed upload size in MB
 export const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
 
 export const downloadFile = (blob, filename) => {
