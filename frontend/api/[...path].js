@@ -15,7 +15,7 @@ export default async function handler(req, res) {
   // Extract the sub-path after /api/
   // req.query.path is an array like ['merge'] or ['pick-folder']
   const pathSegments = req.query.path || [];
-  const subPath = pathSegments.join('/');
+  const subPath = Array.isArray(pathSegments) ? pathSegments.join('/') : pathSegments;
   const targetUrl = `${backendUrl}/${subPath}`;
 
   try {
