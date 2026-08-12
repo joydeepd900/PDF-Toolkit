@@ -1,7 +1,8 @@
 import axios from 'axios';
 
-// Pull the URL from Vercel's environment variables
-const API_BASE = import.meta.env.VITE_API_URL;
+// Requests go to /api/* which Vercel's serverless proxy forwards to the backend.
+// The real backend URL is stored server-side only (never in client code).
+const API_BASE = '/api';
 
 // ── Global Configuration ──────────────────────────────────────────────────────
 export const MAX_FILE_SIZE_MB = 70;              // Maximum allowed upload size in MB
