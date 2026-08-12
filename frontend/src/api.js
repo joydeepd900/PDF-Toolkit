@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE = '/api';
+// Pull the URL from Vercel's environment variables
+const API_BASE = import.meta.env.VITE_API_URL;
+
 // ── Global Configuration ──────────────────────────────────────────────────────
 export const MAX_FILE_SIZE_MB = 70;              // Maximum allowed upload size in MB
 export const MAX_FILE_SIZE_BYTES = MAX_FILE_SIZE_MB * 1024 * 1024;
@@ -109,7 +111,7 @@ export const executeTool = async (tool, files, options, settings = {}) => {
     // Determine extension from MIME type
     const type = response.data.type || '';
     const ext = type.includes('zip') ? 'zip' :
-                type.includes('text') ? 'txt' : 'pdf';
+      type.includes('text') ? 'txt' : 'pdf';
 
     if (options.outputName && options.outputName.trim() !== '') {
       // Prioritize the custom name the user typed

@@ -40,7 +40,7 @@ class FileSizeLimitMiddleware(BaseHTTPMiddleware):
 app.add_middleware(FileSizeLimitMiddleware)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # In production, replace "*" with your frontend's URL
+    allow_origins=["https://pdf-toolkit-joy.vercel.app"],  # In production, replace "*" with your frontend's URL
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

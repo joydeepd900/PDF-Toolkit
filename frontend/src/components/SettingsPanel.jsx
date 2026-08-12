@@ -109,7 +109,8 @@ const SettingsPanel = ({ settings, onSettingChange, onClose }) => {
             <button
               onClick={async () => {
                 try {
-                  const res = await fetch('http://localhost:8000/api/pick-folder');
+                  // Replaced localhost with the environment variable
+                  const res = await fetch(`${import.meta.env.VITE_API_URL}/pick-folder`);
                   const data = await res.json();
                   if (data.path) {
                     onSettingChange('outputDirectory', data.path);
