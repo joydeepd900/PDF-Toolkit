@@ -12,7 +12,7 @@ dist
 dist-ssr
 *.local
 
-# Environment variables (may contain server IPs — never commit)
+# Environment variables and deploy config (contain server IPs — never commit)
 .env
 
 # Editor directories and files
